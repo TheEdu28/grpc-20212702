@@ -6,7 +6,12 @@ package saludo;
 
 service Saludador {
   rpc SaludarUno (SaludoRequest) returns (SaludoResponse);
+  rpc SaludarVarios (SaludoRequest) returns (stream SaludoResponse);
 }
+
+//service Saludador {
+  //rpc SaludarUno (SaludoRequest) returns (SaludoResponse);
+//}
 
 message SaludoRequest {
   string nombre = 1;
